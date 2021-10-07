@@ -21,7 +21,7 @@
   margin: .1em .3em .4em .3em;
   border-radius: 100%;
   box-shadow: 0 0 0 5px var(--ring) inset, 0 0 .3em -.03em var(--shadow);
-  background: linear-gradient( to var(--blend-dir), var(--blend1) var(--blend-from), var(--blend2) var(--blend-to));
+  background: linear-gradient( to top right, var(--blend1) 0%, var(--blend2) 100%);
 /*   filter: saturate(0); */
 }
 /* [icon]:hover {
