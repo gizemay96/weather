@@ -11,19 +11,19 @@
 }
 
 
-// [icon] {
-//   flex: none;
-//   display: none;
-//   position: relative;
-//   font-size: calc(10em + 1vmin);
-//   width: 100px;
-//   height: 100px;
-//   margin: .1em .3em .4em .3em;
-//   border-radius: 100%;
-//   box-shadow: 0 0 0 5px var(--ring) inset, 0 0 .3em -.03em var(--shadow);
-//   background: linear-gradient( to var(--blend-dir), var(--blend1) var(--blend-from), var(--blend2) var(--blend-to));
-// /*   filter: saturate(0); */
-// }
+.icon-case {
+  flex: none;
+  display: none;
+  position: relative;
+  font-size: calc(10em + 1vmin);
+  width: 100px;
+  height: 100px;
+  margin: .1em .3em .4em .3em;
+  border-radius: 100%;
+  box-shadow: 0 0 0 5px var(--ring) inset, 0 0 .3em -.03em var(--shadow);
+  background: linear-gradient( to var(--blend-dir), var(--blend1) var(--blend-from), var(--blend2) var(--blend-to));
+/*   filter: saturate(0); */
+}
 /* [icon]:hover {
   filter: saturate(1);
 } */

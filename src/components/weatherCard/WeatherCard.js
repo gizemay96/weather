@@ -27,14 +27,14 @@ function WeatherCard({ cardName = '' }) {
                             <div className="icon">
                                 {/* SUNNY */
                                     weather.weather[0].main === "Clear" &&
-                                    <div icon="sunny" data-label={weather.weather[0].main}>
+                                    <div className="icon-case" icon="sunny" data-label={weather.weather[0].main}>
                                         <span className="sun"></span>
                                     </div>
                                 }
 
                                 {/* CLOUDY */
                                     weather.weather[0].main === "Clouds" &&
-                                    <div icon="cloudy" data-label={weather.weather[0].main}>
+                                    <div className="icon-case" icon="cloudy" data-label={weather.weather[0].main}>
                                         <span className="cloud"></span>
                                         <span className="cloud"></span>
                                     </div>
@@ -43,7 +43,7 @@ function WeatherCard({ cardName = '' }) {
                                 {/* SNOWMAN */}
                                 {
                                     cardName === "snowly" &&
-                                    <div icon="snowy" data-label={weather.weather[0].main}>
+                                    <div className="icon-case" icon="snowy" data-label={weather.weather[0].main}>
                                         <span className="snowman"></span>
                                         <ul>
                                             <li></li>
@@ -66,7 +66,7 @@ function WeatherCard({ cardName = '' }) {
                                 {
 
                                     weather.weather[0].main === "Rain" &&
-                                    <div icon="stormy" data-label={weather.weather[0].main}>
+                                    <div className="icon-case" icon="stormy" data-label={weather.weather[0].main}>
                                         <span className="cloud"></span>
                                         <ul>
                                             <li></li>
@@ -80,7 +80,7 @@ function WeatherCard({ cardName = '' }) {
                                 {/* MOON  */}
                                 {
                                     cardName === "moon" &&
-                                    <div icon="supermoon" data-label={weather.weather[0].main}>
+                                    <div className="icon-case" icon="supermoon" data-label={weather.weather[0].main}>
                                         <span className="moon"></span>
                                         <span className="meteor"></span>
                                     </div>}
