@@ -19,7 +19,7 @@ export const CityProvider = ({ children }) => {
         axios(options)
             .then(function (response) {
                 setactiveCity(response.data.list[0]);
-                localStorage.setItem('userLocation' , JSON.stringify(response.data.list[0]))
+                localStorage.setItem('userLocation', JSON.stringify(response.data.list[0]))
             })
             .catch(function (error) {
                 console.error(error);
@@ -27,17 +27,18 @@ export const CityProvider = ({ children }) => {
     }
 
     useEffect(() => {
+        setactiveCity({
+            name: "İstanbul",
+            coord: {
+                lat: 41.015137,
+                lon: 28.979530
+            }
+        });
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            setactiveCity({
-                name: "İstanbul",
-                coord: {
-                    lat: 41.015137,
-                    lon: 28.979530
-                }
-            });
         }
+        
     }, [])
 
     const values = {

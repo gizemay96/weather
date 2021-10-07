@@ -49,30 +49,36 @@ function SelectCity() {
 
     useEffect(() => {
         const userCity = JSON.parse(localStorage.getItem('userLocation'));
-        setisUserLocationActive(userCity.name === activeCity.name);
+        if (userCity) {
+            setisUserLocationActive(userCity.name === activeCity.name);
+        }
     }, [activeCity])
 
     return (
         <div>
 
-            <div className="btn-group">
-                <button className="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                <i className="fas fa-city"></i>   {activeCity.name}
-                </button>
-                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="defaultDropdown">
-                    {
-                        !isUserLocationActive &&
-                        <li><button onClick={() => getUserLoction()} className="dropdown-item">
-                            <i className="fas fa-map-marker-alt"></i>  My Location
-                        </button></li>
-                    }
-                    {
-                        cityList.map((item, ind) =>
-                            <li key={ind} ><button onClick={() => setactiveCity(item)} className="dropdown-item">{item.name}</button></li>
-                        )
-                    }
-                </ul>
-            </div>
+            {
+                activeCity && 
+                <div className="btn-group">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        <i className="fas fa-city"></i>   {activeCity.name}
+                    </button>
+                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="defaultDropdown">
+                        {
+                            !isUserLocationActive &&
+                            <li><button onClick={() => getUserLoction()} className="dropdown-item">
+                                <i className="fas fa-map-marker-alt"></i>  My Location
+                            </button></li>
+                        }
+                        {
+                            cityList.map((item, ind) =>
+                                <li key={ind} ><button onClick={() => setactiveCity(item)} className="dropdown-item">{item.name}</button></li>
+                            )
+                        }
+                    </ul>
+                </div>
+
+            }
 
 
         </div>
