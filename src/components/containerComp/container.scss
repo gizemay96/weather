@@ -1,0 +1,9 @@
+.page-case{
+    @media only screen and (max-width: 770px) {
+          display: contents !important;
+          .select-component{
+              display: flex;
+              justify-content: center;
+          }
+      }
+}

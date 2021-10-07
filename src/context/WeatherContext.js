@@ -11,9 +11,10 @@ export const WeatherProvider = ({ children }) => {
     const [weatherDetail, setDetail] = useState({})
 
     useEffect(() => {
-        if (activeCity && activeCity.coord !== undefined) {
-            const lat = activeCity.coord.lat;
-            const lon = activeCity.coord.lon;
+        if (activeCity && (activeCity.coord || activeCity.latitude)) {
+            const lat = activeCity.coord ? activeCity.coord.lat : activeCity.latitude;
+            const lon = activeCity.coord ? activeCity.coord.lon : activeCity.longitude;
+
             const options = {
                 method: 'GET',
                 url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&&units=metric&exclude=hourly&appid=2c9c7ab97001a33b80cab75254178bc8`,

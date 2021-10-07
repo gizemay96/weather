@@ -1,0 +1,25 @@
+ .dropdown-menu {
+    max-height: 760px;
+    overflow-y: scroll;
+    margin-left: -25px !important;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff3d;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 53, 53);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(37, 37, 37);
+  }

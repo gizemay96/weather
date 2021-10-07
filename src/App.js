@@ -1,5 +1,5 @@
 import './App.css';
-import Container from './components/Container';
+import Container from './components/containerComp/Container';
 import { CityProvider } from './context/CityContext';
 import { WeatherProvider } from './context/WeatherContext';
 

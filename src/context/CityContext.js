@@ -28,17 +28,18 @@ export const CityProvider = ({ children }) => {
 
     useEffect(() => {
         setactiveCity({
+            id: 34,
+            latitude: "41.0053",
+            longitude: "28.9770",
             name: "İstanbul",
-            coord: {
-                lat: 41.015137,
-                lon: 28.979530
-            }
+            population: 14657434,
+            region: "Marmara"
         });
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         }
-        
+
     }, [])
 
     const values = {
